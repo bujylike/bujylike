@@ -1,18 +1,3 @@
-cat > index.html <<'HTML'
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Моя страница</title>
-</head>
-<body>
-  <!-- Вставьте сюда ваш HTML -->
-</body>
-</html>
-HTML
-git add index.html
-git commit -m "Добавить index.html"
-git push origin main
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -52,6 +37,7 @@ git push origin main
 
     img {
       width: 100%;
+      max-width: 150px ;
       border-radius: 12px;
       margin: 15px 0;
     }
@@ -96,10 +82,12 @@ git push origin main
       margin: 30px 0 10px;
     }
     .gallery-grid {
-      display: grid;
+      display: flex;
+      width: 39%;
       grid-template-columns:repeat(2,1fr);
-      gap: 10px;
+      gap: 5px;
       margin: 15px 0;
+      height: 100%;
     }
   </style>
 </head>
@@ -112,16 +100,19 @@ git push origin main
       <p>Свежее мясо • Ұлттық тағамдар<br>Полуфабрикаты • Дайын тағамдар</p>
     </div>
     
-    <img src="c:\Users\Админ\Downloads\photo_5222298216529861438_y.jpg" style="width: 180px;">
-
+ <div class="gallery-grid"> 
+      <img src="c:\Users\Админ\Downloads\photo_5222298216529861438_y (1).jpg">
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161600_y.jpg">
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161592_y.jpg">
+    </div>
     <!-- КНОПКА WHATSAPP -->
     <a class="btn" href="https://wa.me/77786390099">
       📲 Заказать в WhatsApp
     </a>
-      <div class="gallery-grid"> 
+      <div class="gallery-grid" style="height: 240px;"> 
       <img src="c:\Users\Админ\Downloads\photo_5222298216529859493_y (1).jpg">
-      <img src="c:\Users\Админ\Downloads\photo_5222298216529859487_y.jpg">
-      
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161593_y.jpg">
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161598_y.jpg">
     </div>
     
 
@@ -129,23 +120,36 @@ git push origin main
       <h2>🍽 Бешбармак</h2>
       <p>
         1 порция — 4 290 тг<br>
-        2 порции — 8 490 тг<br>
+        1 порция құрамында:<br>
+🥩 Сиыр еті<br>
+🐎 Жылқының сүр еті<br>
+🥓 1 дана қазы<br>
+🔥 Дәмді бұжы<br>
+🥔 Картоп<br>
+🥕 Сәбіз<br>
+🍜 Қолмен иленіп, қолдан жайылған нан<br>
+🧂  Тұздығы<br>
+🍵 Ыстық сорпа (арнайы ыдыста)<br>
         Детская порция — 3 950 тг<br>
-        1 табак — 23 900 тг<br>
+        1 табак — 24 900 тг<br>
         Сорпа — 500 тг<br>
         Шұбат 0,5 л — 950 тг
       </p>
     </div>
 
     <!-- ҰЛТТЫҚ ТАҒАМДАР -->
-    <img src="image3.jpg" alt="Ұлттық тағамдар">
+      <div class="gallery-grid"> 
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161643_y.jpg">
+      <img src="c:\Users\Админ\Downloads\IMG_8761.PNG">
+      <img src="c:\Users\Админ\Downloads\photo_5226502658800161588_y.jpg">
+    </div>
 
     <div class="block">
-      <h2>🇰🇿 Ұлттық тағамдар</h2>
+      <h2>Ұлттық тағамдар</h2>
       <p>
         Қазы — 5 400 тг/кг<br>
-        Бужы — 4 100–4 250 тг/кг<br>
-        Шұжық — 3 300–4 100 тг/кг<br>
+        Бужы — 4 100 тг/кг<br>
+        Шұжық — 3 500 тг/кг<br>
         Әсіп — 3 900 тг/кг<br>
         Карта — 2 350 тг/кг<br>
         Құйрық май — 5 000 тг/кг
@@ -153,7 +157,11 @@ git push origin main
     </div>
 
     <!-- ПОЛУФАБРИКАТЫ -->
-    <img src="image4.jpg" alt="Полуфабрикаты">
+    <div class="gallery-grid"> 
+      <img src="c:\Users\Админ\Downloads\Без названия (1).jpg">
+      <img src="c:\Users\Админ\Downloads\Голубцы Полуфабрикаты  Домашние.jpg">
+      <img src="c:\Users\Админ\Downloads\Без названия (2).jpg">
+    </div>
 
     <div class="block">
       <h2>⏱ Полуфабрикаттар</h2>
@@ -162,7 +170,8 @@ git push origin main
         Пельмени — 4 200 тг/кг<br>
         Котлеты говяжьи — 4 200 тг/кг<br>
         Котлеты куриные — 3 900 тг/кг<br>
-        Тефтели — 3 900–4 200 тг/кг<br>
+        Тефтели говяжьи — 3 900 тг/кг<br>
+        Тефтели куриные — 4 200 тг/кг<br>
         Голубцы — 3 700 тг/кг
       </p>
     </div>
@@ -171,13 +180,13 @@ git push origin main
     <div class="block">
       <h2>📍 Адрес и время</h2>
       <p>
-        📌 Адрес: Ақтау қаласы, "17 мкр 95 үй <br>
+        📌 Адрес: Ақтау қаласы, 17 мкр 95 үй <br>
         ⏰ Время работы: 09:00 – 20:00
       </p>
     </div>
 
     <!-- КНОПКА WHATSAPP -->
-    <a class="btn" href="https://wa.me/7XXXXXXXXXX">
+    <a class="btn" href="https://wa.me/77786390099">
       📲 Написать в WhatsApp
     </a>
 
